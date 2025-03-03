@@ -36,3 +36,6 @@ Thumbs.db
 # VSCode
 .vscode/
 
+# ISAAC
+isaac_ros_assets/
+
