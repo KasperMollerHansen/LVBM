@@ -8,7 +8,3 @@
 	path = src/isaac_ros_common
 	url = https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common.git
 	branch = release-3.2
-[submodule "src/nvblox"]
-	path = src/nvblox
-	url = https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox.git
-	branch = release-3.2
