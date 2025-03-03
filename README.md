@@ -29,13 +29,14 @@ source ~/.bashrc
 
 3. **Clone the LVBM repository**:
 ```
+cd ${ISAAC_ROS_WS} && \
 git clone https://github.com/KasperMollerHansen/LVBM.git isaac_ros-dev
 git submodule update --init --recursive
 ```
 
 4. **Setup Docker Environment**:
 ```
-${ISAAC_ROS_WS} && \
+cd ${ISAAC_ROS_WS} && \
 ./docker_env_setup.sh
 ```
 
