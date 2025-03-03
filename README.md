@@ -21,8 +21,6 @@ mkdir -p  ~/workspaces/isaac_ros-dev/
 
 2. **Set the workspace environment variable**:
 
-Add the following line to your `.bashrc`:
-
 ```
 echo "export ISAAC_ROS_WS=${HOME}/workspaces/isaac_ros-dev/" >> ~/.bashrc
 source ~/.bashrc
@@ -30,15 +28,12 @@ source ~/.bashrc
 ```
 
 3. **Clone the LVBM repository**:
-
-Clone the repository into the workspace:
 ```
 git clone https://github.com/KasperMollerHansen/LVBM.git isaac_ros-dev
+git submodule update --init --recursive
 ```
 
 4. **Setup Docker Environment**:
-
-Navigate to the workspace and run the environment setup script:
 ```
 ${ISAAC_ROS_WS} && \
 ./docker_env_setup.sh
@@ -49,15 +44,13 @@ ${ISAAC_ROS_WS} && \
 
 To launch the Docker container, run the following commands:
 
-1. Navigate to the `isaac_ros_common` directory:
-
 ```
 cd $ISAAC_ROS_WS/src/isaac_ros_common && \
 ./scripts/run_dev.sh
 ```
 
 
-### Build the Workspace
+### Build the Workspace in the Docker
 
 Once the Docker environment is up and running, you can build the workspace:
 ```
