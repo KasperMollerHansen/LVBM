@@ -1,0 +1,6 @@
+[submodule "src/sim_px4_ros2"]
+	path = src/sim_px4_ros2
+	url = https://github.com/KasperMollerHansen/sim_px4_ros2.git
+[submodule "src/ps4_msgs"]
+	path = src/ps4_msgs
+	url = https://github.com/PX4/px4_msgs.git
