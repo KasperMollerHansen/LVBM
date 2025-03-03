@@ -4,9 +4,6 @@
 [submodule "src/ps4_msgs"]
 	path = src/ps4_msgs
 	url = https://github.com/PX4/px4_msgs.git
-[submodule "src/nvblox"]
-	path = src/nvblox
-	url = https://github.com/nvidia-isaac/nvblox.git
 [submodule "src/isaac_ros_common"]
 	path = src/isaac_ros_common
 	url = https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common.git
