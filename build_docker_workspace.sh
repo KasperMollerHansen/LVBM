@@ -20,7 +20,7 @@ echo "Navigating to ${ISAAC_ROS_WS}..."
 cd ${ISAAC_ROS_WS}
 
 # Build the workspace using colcon, ignoring the specified packages
-echo "Building the workspace with colcon, ignoring specified packages..."
+echo "Building the workspace with colcon..."
 colcon build --symlink-install --base-paths ${INSTALL_PACKAGES}
 
 echo "Script completed successfully!"
