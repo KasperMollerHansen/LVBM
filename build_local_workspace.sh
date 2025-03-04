@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Activate conda environment
+# Set the conda environment
+export ISAAC_CONDA_ENV="isaac_env"
+
+# Activate the conda environment
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate $ISAAC_CONDA_ENV
+
 # Update package lists to ensure we have the latest information
 echo "Updating package lists..."
 sudo apt-get update
