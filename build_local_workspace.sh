@@ -16,6 +16,6 @@ cd ${LOCAL_ROS_WS}
 
 # Build the workspace using colcon, ignoring the specified packages
 echo "Building the workspace with colcon, ignoring specified packages..."
-colcon build --packages-select ${INSTALL_PACKAGES}
+colcon build --symlink-install --packages-select ${INSTALL_PACKAGES} 
 
 echo "Script completed successfully!"
