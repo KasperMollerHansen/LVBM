@@ -57,7 +57,6 @@ Once the Docker environment is up and running, you can build the workspace:
 ```
 cd $ISAAC_ROS_WS/ && \
 ./build_workspace.sh
-
 ```
 ### Source the Workspace in the Docker
 
