@@ -57,4 +57,20 @@ Once the Docker environment is up and running, you can build the workspace:
 ```
 cd $ISAAC_ROS_WS/ && \
 ./build_workspace.sh
+
+```
+### Source the Workspace in the Docker
+
+Once the workspace is build, the setup.bash cab be sourced
+```
+cd $ISAAC_ROS_WS/ && \
+source install/setup.bash
+```
+
+### Test
+
+```
+ros2 launch nvblox_examples_bringup isaac_sim_example.launch.py \
+rosbag:=${ISAAC_ROS_WS}/isaac_ros_assets/isaac_ros_nvblox/quickstart \
+navigation:=False
 ```
