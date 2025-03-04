@@ -10,7 +10,7 @@ INSTALL_PACKAGES="
 "
 
 # Update rosdep and install dependencies from the workspace, excluding the ignored packages
-echo "Updating rosdep and installing dependencies from ${ISAAC_ROS_WS}/src, ignoring specified packages..."
+echo "Updating rosdep and installing dependencies from ${ISAAC_ROS_WS}/src..."
 rosdep update
 rosdep install -i -r --from-paths ${INSTALL_PACKAGES} --rosdistro humble -y
 
