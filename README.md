@@ -8,18 +8,25 @@ Virtual environments can sometimes cause issues. It's recommended to deactivate 
 ```
 conda deactivate
 ```
-
-### Workspace Setup
+<details>
+<summary> <b>Docker Workspace Setup</b> </summary>
 
 This guide is based on a slightly modified version from [Isaac ROS NVBlox Setup](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_nvblox/isaac_ros_nvblox/index.html#set-up-package-name).
 
 1. **Create a workspace directory**:
 
 ```
-mkdir -p  ~/workspaces/isaac_ros-dev/
+mkdir -p  ~/workspaces/
 ```
 
-2. **Set the workspace environment variable**:
+2. **Clone the LVBM repository**:
+```
+cd  ~/workspaces && \
+git clone https://github.com/KasperMollerHansen/LVBM.git isaac_ros-dev
+git submodule update --init --recursive
+```
+
+3. **Set the workspace environment variable**:
 
 ```
 echo "export ISAAC_ROS_WS=${HOME}/workspaces/isaac_ros-dev/" >> ~/.bashrc
@@ -27,18 +34,15 @@ source ~/.bashrc
 
 ```
 
-3. **Clone the LVBM repository**:
-```
-cd ${ISAAC_ROS_WS} && \
-git clone https://github.com/KasperMollerHansen/LVBM.git isaac_ros-dev
-git submodule update --init --recursive
-```
-
 4. **Setup Docker Environment**:
 ```
 cd ${ISAAC_ROS_WS} && \
 ./docker_env_setup.sh
 ```
+</details>
+
+<details>
+<summary><b>Using the Docker Workspace</b></summary>
 
 
 ### Launching Docker
@@ -56,7 +60,7 @@ cd $ISAAC_ROS_WS/src/isaac_ros_common && \
 Once the Docker environment is up and running, you can build the workspace:
 ```
 cd $ISAAC_ROS_WS/ && \
-./build_workspace.sh
+./build_docker_workspace.sh
 ```
 ### Source the Workspace in the Docker
 
@@ -73,3 +77,30 @@ ros2 launch nvblox_examples_bringup isaac_sim_example.launch.py \
 rosbag:=${ISAAC_ROS_WS}/isaac_ros_assets/isaac_ros_nvblox/quickstart \
 navigation:=False
 ```
+</details>
+
+<details>
+<summary> <b>Local Workspace Setup</b> </summary>
+
+1. **Clone the LVBM repository**:
+```
+cd  ~/workspaces && \
+git clone https://github.com/KasperMollerHansen/LVBM.git
+git submodule update --init --recursive
+```
+
+2. **Set the workspace environment variable**:
+
+```
+echo "export LOCAL_ROS_WS=${HOME}/workspaces/LVBM/" >> ~/.bashrc
+source ~/.bashrc
+```
+3. **Build the local workspace**
+```
+cd $LOCAL_ROS_WS/ && \
+./build_local_workspace.sh
+```
+### 
+
+</details>
+
