@@ -23,6 +23,8 @@ mkdir -p  ~/workspaces/
 ```
 cd  ~/workspaces && \
 git clone https://github.com/KasperMollerHansen/LVBM.git isaac_ros-dev
+
+cd ~/workspaces/isaac_ros-dev/ && \
 git submodule update --init --recursive
 ```
 
@@ -86,6 +88,7 @@ navigation:=False
 ```
 cd  ~/workspaces && \
 git clone https://github.com/KasperMollerHansen/LVBM.git
+cd ~/workspaces/LVBM && \
 git submodule update --init --recursive
 ```
 
