@@ -23,10 +23,4 @@ cd ${ISAAC_ROS_WS}
 echo "Building the workspace with colcon, ignoring specified packages..."
 colcon build --symlink-install --base-paths ${INSTALL_PACKAGES}
 
-# Source the setup script to overlay the workspace environment
-echo "Sourcing the setup.bash to overlay the environment..."
-
-cd ${ISAAC_ROS_WS}
-source install/setup.bash
-
 echo "Script completed successfully!"

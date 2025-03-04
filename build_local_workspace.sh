@@ -14,28 +14,22 @@ sudo apt-get update
 
 # List of packages to install
 INSTALL_PACKAGES="
-    ${ISAAC_ROS_WS}/src/sim_px4_ros2/
-    ${ISAAC_ROS_WS}/src/px4_msgs/
+    ${ISAAC_LOCAL_WS}/src/sim_px4_ros2/
+    ${ISAAC_LOCAL_WS}/src/px4_msgs/
 "
 
 # Update rosdep and install dependencies from the workspace, excluding the ignored packages
-echo "Updating rosdep and installing dependencies from ${ISAAC_ROS_WS}/src, ignoring specified packages..."
+echo "Updating rosdep and installing dependencies from ${ISAAC_LOCAL_WS}/src, ignoring specified packages..."
 rosdep update
 rosdep install -i -r --from-paths ${INSTALL_PACKAGES} --rosdistro humble -y
 
 
 # Navigate to the isaac_ros-dev workspace
-echo "Navigating to ${ISAAC_ROS_WS}..."
-cd ${ISAAC_ROS_WS}
+echo "Navigating to ${ISAAC_LOCAL_WS}..."
+cd ${ISAAC_LOCAL_WS}
 
 # Build the workspace using colcon, ignoring the specified packages
 echo "Building the workspace with colcon, ignoring specified packages..."
 colcon build --symlink-install --base-paths ${INSTALL_PACKAGES}
-
-# Source the setup script to overlay the workspace environment
-echo "Sourcing the setup.bash to overlay the environment..."
-
-cd ${ISAAC_ROS_WS}
-source install/setup.bash
 
 echo "Script completed successfully!"
