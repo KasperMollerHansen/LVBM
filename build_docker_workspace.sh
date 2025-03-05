@@ -7,6 +7,8 @@ sudo apt-get update
 # List of packages to install
 INSTALL_PACKAGES="
     ${ISAAC_ROS_WS}/src/isaac_ros_nvblox/
+    ${ISAAC_ROS_WS}/src/px4_msgs/
+    ${ISAAC_ROS_WS}/src/sim_px4_ros2/
 "
 
 # Update rosdep and install dependencies from the workspace, excluding the ignored packages
