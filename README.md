@@ -39,7 +39,7 @@ source ~/.bashrc
 4. **Setup Docker Environment**:
 ```
 cd ${ISAAC_ROS_WS} && \
-./docker_env_setup.sh
+./scripts/docker_env_setup.sh
 ```
 </details>
 
@@ -62,7 +62,7 @@ cd $ISAAC_ROS_WS/src/isaac_ros_common && \
 Once the Docker environment is up and running, you can build the workspace:
 ```
 cd $ISAAC_ROS_WS/ && \
-./build_docker_workspace.sh
+./scripts/build_docker_workspace.sh
 ```
 3. **Source the Workspace in the Docker**
 
@@ -101,7 +101,7 @@ source ~/.bashrc
 3. **Build the local workspace**
 ```
 cd $LOCAL_ROS_WS/ && \
-./build_local_workspace.sh
+./scripts/build_local_workspace.sh
 ```
 4. **Source the Workspace**
 
