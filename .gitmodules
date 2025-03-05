@@ -12,9 +12,6 @@
 [submodule "src/px4_msgs"]
 	path = src/px4_msgs
 	url = https://github.com/PX4/px4_msgs.git
-[submodule "src/nvblox_sim"]
-	path = src/nvblox_sim
-	url = https://github.com/KasperMollerHansen/nvblox_sim.git
 [submodule "src/sim_nvblox"]
 	path = src/sim_nvblox
 	url = https://github.com/KasperMollerHansen/sim_nvblox.git
