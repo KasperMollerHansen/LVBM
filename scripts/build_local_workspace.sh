@@ -6,7 +6,7 @@ sudo apt-get update
 
 # List of packages to install
 INSTALL_PACKAGES="
-    sim_px4_ros2
+    pegasus_sim_env
     px4_msgs
 "
 
