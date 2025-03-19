@@ -13,6 +13,8 @@
 [submodule "src/sim_nvblox"]
 	path = src/sim_nvblox
 	url = https://github.com/KasperMollerHansen/sim_nvblox.git
+	branch = develop
+	
 [submodule "src/pegasus_sim_env"]
 	path = src/pegasus_sim_env
 	url = https://github.com/KasperMollerHansen/pegasus_sim_env.git
