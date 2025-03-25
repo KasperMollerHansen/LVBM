@@ -32,8 +32,8 @@ git submodule update --init --recursive
 
 ```
 echo "export ISAAC_ROS_WS=${HOME}/workspaces/isaac_ros-dev/" >> ~/.bashrc
+echo "export ROS_DOMAIN_ID=<your_domain_id>"
 source ~/.bashrc
-
 ```
 
 4. **Setup Docker Environment**:
