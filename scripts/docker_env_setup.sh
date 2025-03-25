@@ -77,4 +77,7 @@ else
     rm ${NGC_FILENAME}
 fi
 
+# Step 8: Set up ROS
+export ROS_DOMAIN_ID=21
+
 echo "Setup complete!"
