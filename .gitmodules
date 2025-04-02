@@ -6,6 +6,11 @@
 	path = src/isaac_ros_nvblox
 	url = https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox.git
 	branch = release-3.2
+[submodule "src/isaac_ros_cumotion"]
+	path = src/isaac_ros_cumotion
+	url = https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_cumotion.git
+	branch = release-3.2
+
 [submodule "src/px4_msgs"]
 	path = src/px4_msgs
 	url = https://github.com/PX4/px4_msgs.git
