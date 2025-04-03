@@ -8,7 +8,6 @@
 	url = https://github.com/KasperMollerHansen/isaac_ros_nvblox.git
 	branch = release-3.2-custom
 
-
 [submodule "src/px4_msgs"]
 	path = src/px4_msgs
 	url = https://github.com/PX4/px4_msgs.git
