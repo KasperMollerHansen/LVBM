@@ -6,8 +6,8 @@ sudo apt-get update
 
 # List of packages to install
 INSTALL_PACKAGES="
-    pegasus_sim_env
-    px4_msgs
+    ${LOCAL_ROS_WS}/src/px4_msgs/
+    ${LOCAL_ROS_WS}/src/pegasus_sim_env/
 "
 
 # Update rosdep and install dependencies from the workspace, excluding the ignored packages
