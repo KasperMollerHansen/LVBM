@@ -66,13 +66,17 @@ cd $ISAAC_ROS_WS/ && \
 ```
 3. **Source the Workspace in the Docker**
 
-Once the workspace is build, the setup.bash cab be sourced
+Once the workspace is build, the setup.bash can be sourced
 ```
 cd $ISAAC_ROS_WS/ && \
 source install/setup.bash
 ```
-
-4. **Test**
+4. **Run Nvblox**
+```
+ros2 launch sim_nvblox 2d_nvblox.launch.py 
+```
+5. **Test**
+It can be nice to test if the error is in nvblox or in the sim_nvblox_script.
 
 ```
 ros2 launch nvblox_examples_bringup isaac_sim_example.launch.py \
@@ -105,7 +109,7 @@ cd $LOCAL_ROS_WS/ && \
 ```
 4. **Source the Workspace**
 
-Once the workspace is build, the setup.bash cab be sourced
+Once the workspace is build, the setup.bash can be sourced
 ```
 cd $LOCAL_ROS_WS/ && \
 source install/setup.bash
