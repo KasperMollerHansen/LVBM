@@ -114,6 +114,17 @@ Once the workspace is build, the setup.bash can be sourced
 cd $LOCAL_ROS_WS/ && \
 source install/setup.bash
 ```
+5. **Start simulation**
+You can make an alias for this
+```
+cd $LOCAL_ROS_WS/ && source install/setup.bash && ./src/pegasus_sim_env/launch_pegasus.sh
+```
+6. **Launch Planer Node**
+```
+cd $LOCAL_ROS_WS/
+source install/setup.bash
+ros2 launch pegasus_sim_env pegasus.launch.py
+```
 
 </details>
 
