@@ -104,7 +104,6 @@ source ~/.bashrc
 cd $LOCAL_ROS_WS/ && \
 ./scripts/build_local_workspace.sh
 ```
-```
 4. **Start simulation**
 
 You can make an alias for this
