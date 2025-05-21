@@ -64,21 +64,18 @@ Once the Docker environment is up and running, you can build the workspace:
 cd $ISAAC_ROS_WS/ && \
 ./scripts/build_docker_workspace.sh
 ```
-3. **Source the Workspace in the Docker**
-
-Once the workspace is build, the setup.bash can be sourced
+3. **Run Nvblox**
 ```
 cd $ISAAC_ROS_WS/ && \
 source install/setup.bash
-```
-4. **Run Nvblox**
-```
 ros2 launch sim_nvblox 2d_nvblox.launch.py 
 ```
-5. **Test**
+4. **Test**
 It can be nice to test if the error is in nvblox or in the sim_nvblox_script.
 
 ```
+cd $ISAAC_ROS_WS/ && \
+source install/setup.bash
 ros2 launch nvblox_examples_bringup isaac_sim_example.launch.py \
 rosbag:=${ISAAC_ROS_WS}/isaac_ros_assets/isaac_ros_nvblox/quickstart \
 navigation:=False
