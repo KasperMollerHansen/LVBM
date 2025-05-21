@@ -4,11 +4,14 @@
 echo "Updating package lists..."
 sudo apt-get update
 
-# List of packages to install
-INSTALL_PACKAGES="
-    ${LOCAL_ROS_WS}/src/px4_msgs/
-    ${LOCAL_ROS_WS}/src/pegasus_sim_env/
+# List of package names for colcon
+PACKAGE_NAMES="
+    px4_msgs
+    pegasus_sim_env
 "
+
+# Derive rosdep package paths from colcon package names
+INSTALL_PACKAGES=$(echo ${PACKAGE_NAMES} | sed "s~[^ ]*~${LOCAL_ROS_WS}/src/&~g")
 
 # Update rosdep and install dependencies from the workspace, excluding the ignored packages
 echo "Updating rosdep and installing dependencies from ${LOCAL_ROS_WS}/src..."
@@ -21,6 +24,6 @@ cd ${LOCAL_ROS_WS}
 
 # Build the workspace using colcon, ignoring the specified packages
 echo "Building the workspace with colcon..."
-colcon build --symlink-install --packages-select ${INSTALL_PACKAGES} 
+colcon build --symlink-install --packages-select ${PACKAGE_NAMES}
 
 echo "Script completed successfully!"
