@@ -104,13 +104,18 @@ source ~/.bashrc
 cd $LOCAL_ROS_WS/ && \
 ./scripts/build_local_workspace.sh
 ```
-4. **Start simulation**
+</details>
 
-You can make an alias for this
+<details>
+<summary> <b>Using the Local Workspace</b> </summary>
+
+1. **Start simulation**
 ```
-cd $LOCAL_ROS_WS/ && source install/setup.bash && ./src/pegasus_sim_env/launch_pegasus.sh
+cd $LOCAL_ROS_WS/
+source install/setup.bash
+./src/pegasus_sim_env/launch_pegasus.sh
 ```
-5. **Launch Planer Node**
+2. **Launch Planer Node**
 ```
 cd $LOCAL_ROS_WS/
 source install/setup.bash
