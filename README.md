@@ -71,8 +71,8 @@ source install/setup.bash
 ros2 launch sim_nvblox 2d_nvblox.launch.py 
 ```
 4. **Test**
-It can be nice to test if the error is in nvblox or in the sim_nvblox_script.
 
+It can be nice to test if the error is in nvblox or in the sim_nvblox_script.
 ```
 cd $ISAAC_ROS_WS/ && \
 source install/setup.bash
