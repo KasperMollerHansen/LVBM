@@ -104,19 +104,14 @@ source ~/.bashrc
 cd $LOCAL_ROS_WS/ && \
 ./scripts/build_local_workspace.sh
 ```
-4. **Source the Workspace**
+```
+4. **Start simulation**
 
-Once the workspace is build, the setup.bash can be sourced
-```
-cd $LOCAL_ROS_WS/ && \
-source install/setup.bash
-```
-5. **Start simulation**
 You can make an alias for this
 ```
 cd $LOCAL_ROS_WS/ && source install/setup.bash && ./src/pegasus_sim_env/launch_pegasus.sh
 ```
-6. **Launch Planer Node**
+5. **Launch Planer Node**
 ```
 cd $LOCAL_ROS_WS/
 source install/setup.bash
