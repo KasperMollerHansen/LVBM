@@ -1,3 +1,6 @@
+# Futher development in this repository:
+https://github.com/BjarkeHJ/online_skeleton_extraction_path_planner
+
 # Local Voxel-Based Mapping Setup
 
 This guide provides instructions for setting up the Local Voxel-Based Mapping (LVBM) environment.
